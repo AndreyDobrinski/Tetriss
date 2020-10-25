@@ -1,0 +1,118 @@
+body {
+  /* background-color: violet; */
+  background-image: url("https://scienceline.org/wp-content/uploads/2020/01/tetris.jpg");
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+.gameInfo {
+  color: turquoise;
+}
+
+
+
+.grid {
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: green;
+}
+
+.grid div {
+  height: 20px;
+  width: 20px;
+}
+
+.tetrisWords {
+  background-color: orange;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 350px;
+  left: 500px;
+  padding: 10px;
+  width: 400px;
+  background-color: #35a797;
+  color: black;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.modal button {
+  font-size: 30px;
+  background-color: #965fa0;
+  color: azure;
+  cursor: pointer;
+}
+
+.buttonAroows button {
+  font-size: 30px;
+}
+
+.arrowLeft {
+  position: absolute;
+  top: 350px;
+  left: 495px;
+  padding: 10px;
+  width: 80px;
+  color: black;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.arrowRight {
+  position: absolute;
+  top: 350px;
+  left: 654px;
+  padding: 10px;
+  width: 80px;
+  color: black;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.arrowUp {
+  position: absolute;
+  top: 280px;
+  left: 575px;
+  padding: 10px;
+  width: 80px;
+  color: black;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.arrowDown {
+  position: absolute;
+  top: 419px;
+  left: 575px;
+  padding: 10px;
+  width: 80px;
+  color: black;
+  border-radius: 2px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+h5 {
+  /* text-align: center; */
+  font-size: 30px;
+  color: turquoise;
+}
+
+/* .words {
+  background-color: tomato;
+} */
+
+p {
+  color: white;
+  left: 100px;
+}

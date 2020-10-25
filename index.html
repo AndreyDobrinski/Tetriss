@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onkeydown="controls(event)" >
+
+    <div class="gameInfo">
+     <h1>Tetris By Andrey</h1>
+     <h3>Score:<span class="score">0</span></h3>
+     <h4>Time:<span class ="time">0</span></h4>
+   </div>
+<div class="buttonAroows">
+    <button onclick="moveLeft()" class="arrowLeft">⬅️</button>
+    <button onclick="moveRight()" class="arrowRight">➡️</button>
+    <button onclick="rotate()" class="arrowUp">⬆️</button>
+    <button onclick="moveDown()" class="arrowDown">⬇️</button>
+</div>
+
+
+    <div class="modal" id="ganeOver">
+        <p>Game Over</p>
+        <button  onclick="reloadPage()" >Restart</button>
+    </div>
+
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        <div class="used"></div>
+        
+        <!-- const container = document.getElementById("grid");
+        for(var i = 0; i < 200; i++){
+            container.innerHTML +=  '<div>' + '</div>';
+        } -->
+<!-- this one can be used instead -->
+
+</div>
+
+<div class="words">
+ <h5>TIPS:</h5>
+ <p>   Arrow Left : Moves the Tetris word to the LEFT</p>
+ <p>   Arrow Right :Moves the Tetris word to the RIGHT </p>
+ <p>   Arrow Down : Moves the Tetris word FASTER </p>
+ <p>   Arrow Up : ROTATES the Tetris word</p>
+</div>
+
+    <script src="js/main.js"></script>
+    <script src="js/tetrisWords.js"></script>
+    <script src="js/controls.js"></script>
+</body>
+</html>
